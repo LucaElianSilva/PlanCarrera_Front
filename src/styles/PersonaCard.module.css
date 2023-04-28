@@ -1,8 +1,10 @@
-.card-container {
+.card-container, .card-container-transitioned {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 350px;
+    height: 245px;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    transition: height 0.5s ease; /* le da una transicion al aumentar o disminuir su heigth*/
     border-radius: 20px;
     margin: 15px;
     -webkit-box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.15);
@@ -10,21 +12,51 @@
     box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.15);
 }
 
-.persona-icon {
+.card-container-transitioned {
+    height: 350px;
+}
+
+.persona-img {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding-top: 25px;
     width: 100%;
 }
 
-.icon {
+.img-container {
     width: 130px;
+}
+
+.img-user {
+    width: 100%;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btn-more {
+    width: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff7a16;
+    cursor: pointer;
+}
+
+.icon {
+    width: 10px;
 }
 
 .card {
     width: 100%;
     list-style: none;
-    padding: 40px 0px 0px 35px;
+    padding: 20px 0px 0px 35px;
 }
 
 .card-info {
@@ -36,7 +68,7 @@
 .info-title {
     margin: 0;
     font-size: 14px;
-    color: #00000061;
+    color: #ff6d00;
     font-weight: 600;
     font-family: 'Roboto';
 }
@@ -45,7 +77,22 @@
     margin: 0;
     padding: 2.5px 0px 0px 8px;
     font-size: 12px;
-    color: #745b5b;
+    color: #333333;
     font-weight: 600;
     font-family: 'Roboto';
+}
+
+.icon-gender-male, .icon-gender-female {
+    filter: contrast(70%);
+    margin: 2px 0px 0px 6px;
+}
+
+.icon-gender-male {
+    width: 12px;
+    height: 12px;
+}
+
+.icon-gender-female {
+    width: 14px;
+    height: 14px;
 }
