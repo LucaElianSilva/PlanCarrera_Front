@@ -11,11 +11,9 @@ const ListPersona = () => {
         axios.get(url)
         .then(response => {
             setPersonas(response?.data);
-          console.log(response.data);
         })
         .catch(error => {
             setPersonas([]);
-          console.error(error);
         });
     }
 
